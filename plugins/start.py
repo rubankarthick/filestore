@@ -55,11 +55,11 @@ async def start_command(client: Client, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except:
                 return
-        temp_msg = await message.reply("Please wait...")
+        temp_msg = await message.reply("Please wait...😅")
         try:
             messages = await get_messages(client, ids)
         except:
-            await message.reply_text("Something went wrong..!")
+            await message.reply_text("Something went wrong..!😢\n Contact Admin @reoffadminbot")
             return
         await temp_msg.delete()
 
@@ -88,8 +88,17 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Me", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton("🎬 UHD MOVIES/SERIES 🎬", url="https://t.me/RE_MOVIES")
+                ],
+                [
+                    InlineKeyboardButton("🔉 DISCUSSION 🔉", url="https://t.me/+rucqp8Ao-soyMDU1")
+                ],
+                [
+                    InlineKeyboardButton("❔ HELP ❓", url="http://t.me/reoffadminbot")
+                ],
+                [
+                    InlineKeyboardButton("❕ ABOUT ❗", callback_data = "about"),
+                    InlineKeyboardButton("🔒 CLOSE 🔒", callback_data = "close")
                 ]
             ]
         )
@@ -123,7 +132,7 @@ async def not_joined(client: Client, message: Message):
     buttons = [
         [
             InlineKeyboardButton(
-                "Join Channel",
+                "🔉JOIN MAIN CHANNEL 🔉",
                 url = client.invitelink)
         ]
     ]
@@ -131,7 +140,7 @@ async def not_joined(client: Client, message: Message):
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text = 'Try Again',
+                    text = '🥹 TRY AGAIN 🥹',
                     url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
@@ -169,7 +178,7 @@ async def send_text(client: Bot, message: Message):
         deleted = 0
         unsuccessful = 0
         
-        pls_wait = await message.reply("<i>Broadcasting Message.. This will Take Some Time</i>")
+        pls_wait = await message.reply("<i>Broadcasting Your Message👨🏻‍💻.... This will Take Some Time 😅</i>")
         for chat_id in query:
             try:
                 await broadcast_msg.copy(chat_id)
@@ -191,11 +200,11 @@ async def send_text(client: Bot, message: Message):
         
         status = f"""<b><u>Broadcast Completed</u>
 
-Total Users: <code>{total}</code>
-Successful: <code>{successful}</code>
-Blocked Users: <code>{blocked}</code>
-Deleted Accounts: <code>{deleted}</code>
-Unsuccessful: <code>{unsuccessful}</code></b>"""
+Total Users 🦹‍♂️ : <code>{total}</code>
+Successful ✅ : <code>{successful}</code>
+Blocked Users 🚫 : <code>{blocked}</code>
+Deleted Accounts 🗑️ : <code>{deleted}</code>
+Unsuccessful ❌ : <code>{unsuccessful}</code></b>"""
         
         return await pls_wait.edit(status)
 
