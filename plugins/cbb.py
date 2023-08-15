@@ -10,11 +10,12 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about": 
         await query.message.edit_text(
-            text = f"<b>🧑🏻‍💻 Bot Creator :</b> <a href='https://www.gaurav4x.ml/'>@Gaurav4x </a>",
+            text = f"<b>🧑🏻‍💻 Bot Creator :</b> <a href='https://ruban96.online'> Ruban </a>",
             disable_web_page_preview = False,
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
+                        InlineKeyboardButton("⬅️ Back", callback_data = "start"),
                         InlineKeyboardButton("🔒 Close", callback_data = "close")
                     ]
                 ]
