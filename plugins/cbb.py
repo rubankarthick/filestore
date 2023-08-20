@@ -21,6 +21,19 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 ]
             )
         )
+    elif data == "start": 
+        await query.message.edit_text(
+            text = f"<b>🧑🏻‍💻 Bot Creator :</b> <a href='https://ruban96.online'> Ruban </a>",
+            disable_web_page_preview = False,
+            reply_markup = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("⬅️ BACK", callback_data = "start"),
+                        InlineKeyboardButton("🔒 CLOSE", callback_data = "close")
+                    ]
+                ]
+            )
+        )
     elif data == "morefromus": 
         await query.message.edit_text(
             text = f"<b>JOIN MORE CHANNEL TO DOWNLOAD MOVIE FAST❕</b>",
