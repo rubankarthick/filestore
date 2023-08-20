@@ -21,6 +21,25 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 ]
             )
         )
+    elif data == "morefromus": 
+        await query.message.edit_text(
+            text = f"<b>JOIN MORE CHANNEL TO DOWNLOAD MOVIE FAST❕</b>",
+            disable_web_page_preview = False,
+            reply_markup = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("📽️NEW TAMIL MOVIES🎬", url=f"https://t.me/+GiydT_oyMZE0MjZl"),
+                        InlineKeyboardButton("📽️HOLLYWOOD DUBBED MOVIES🎬", url=f"https://t.me/+r7uCG7sSC-VmMGE9"),
+                        InlineKeyboardButton("📽️MULTI LANGUAGE MOVIES🎬", url=f"https://t.me/+8pc1V0Mk8mM0Y2I1"),
+                        InlineKeyboardButton("📽️ALL NEW SERIES🎬", url=f"https://t.me/+Md4DpWxJ7NlmOTI9")
+                    ],
+                    [
+                        InlineKeyboardButton("⬅️ BACK", callback_data = "start"),
+                        InlineKeyboardButton("🔒 CLOSE", callback_data = "close")
+                    ]
+                ]
+            )
+        )
     elif data == "close":
         await query.message.delete()
         try:
