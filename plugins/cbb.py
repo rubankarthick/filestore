@@ -23,16 +23,29 @@ async def cb_handler(client: Bot, query: CallbackQuery):
         )
     elif data == "start": 
         await query.message.edit_text(
-            text = f"<b>🧑🏻‍💻 Bot Creator :</b> <a href='https://ruban96.online'> Ruban </a>",
+            text = f"👋 Hello {first} \nI am @RE_MOVIES Official Files and Link Share Bot.",
             disable_web_page_preview = False,
             reply_markup = InlineKeyboardMarkup(
+            [
                 [
-                    [
-                        InlineKeyboardButton("⬅️ BACK", callback_data = "start"),
-                        InlineKeyboardButton("🔒 CLOSE", callback_data = "close")
-                    ]
+                    InlineKeyboardButton("🎬 MAIN CHANNEL 🎬", url="https://t.me/RE_MOVIES")
+                ],
+                [
+                    InlineKeyboardButton("📽️ UHD MOVIES/SERIES 📽️", url="https://t.me/REMOVIESDUB")
+                ],
+                [
+                    InlineKeyboardButton("😎 MORE FROM US 📢", callback_data = "morefromus")
+                ],
+                [
+                    InlineKeyboardButton("🔉 DISCUSSION 🔉", url="https://t.me/+rucqp8Ao-soyMDU1"),
+                    InlineKeyboardButton("❔ HELP ❓", url="http://t.me/reoffadminbot")
+                ],
+                [
+                    InlineKeyboardButton("❕ ABOUT ❗", callback_data = "about"),
+                    InlineKeyboardButton("🔒 CLOSE 🔒", callback_data = "close")
                 ]
-            )
+            ]
+        )
         )
     elif data == "morefromus": 
         await query.message.edit_text(
