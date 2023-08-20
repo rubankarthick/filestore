@@ -83,12 +83,16 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🎬 UHD MOVIES/SERIES 🎬", url="https://t.me/RE_MOVIES")
+                    InlineKeyboardButton("🎬 MAIN CHANNEL 🎬", url="https://t.me/RE_MOVIES")
                 ],
                 [
-                    InlineKeyboardButton("🔉 DISCUSSION 🔉", url="https://t.me/+rucqp8Ao-soyMDU1")
+                    InlineKeyboardButton("📽️ UHD MOVIES/SERIES 📽️", url="https://t.me/REMOVIESDUB")
                 ],
                 [
+                    InlineKeyboardButton("😎 MORE FROM US 📢", callback_data = "morefromus")
+                ],
+                [
+                    InlineKeyboardButton("🔉 DISCUSSION 🔉", url="https://t.me/+rucqp8Ao-soyMDU1"),
                     InlineKeyboardButton("❔ HELP ❓", url="http://t.me/reoffadminbot")
                 ],
                 [
